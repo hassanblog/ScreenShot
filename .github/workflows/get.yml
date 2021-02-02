@@ -1,7 +1,7 @@
 name: get
 on:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: "0 0 * * 0"
   push:
     branches:
       - main
@@ -11,15 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Download
-      run: |
-        curl https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://immyw.com/ -o immyw.com.jpg
-        curl https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://butterfly.js.org/ -o butterfly.js.org.jpg
-        curl https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://akilar.top/ -o akilar.top.jpg
+      - name: Download
+        run: |
+          curl https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://immyw.com/ -o immyw.com.jpg
+          curl https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://butterfly.js.org/ -o butterfly.js.org.jpg
+          curl https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://akilar.top/ -o akilar.top.jpg
 
-        curl https://purge.jsdelivr.net/gh/hassanblog/ScreenShot@gh-pages/*.*
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.TOKEN }}
-        publish_dir: ./
+          curl https://purge.jsdelivr.net/gh/hassanblog/ScreenShot@gh-pages/*.*
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.TOKEN }}
+          publish_dir: ./
