@@ -16,6 +16,7 @@ jobs:
           curl https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://immyw.com/ -o immyw.com.jpg
           curl https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://butterfly.js.org/ -o butterfly.js.org.jpg
           curl https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://akilar.top/ -o akilar.top.jpg
+          curl https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://hassanblog.github.io/ -o hassanblog.github.io.jpg
 
           curl https://purge.jsdelivr.net/gh/hassanblog/ScreenShot@gh-pages/*.*
       - name: Deploy
